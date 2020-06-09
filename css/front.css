@@ -17,6 +17,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    object-fit: contain;
 }
 #avatar {
     height: 180px;
@@ -120,5 +121,4 @@ a:hover {
 }
 .content {
     padding-top: 60px;
-}
 }
