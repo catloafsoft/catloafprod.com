@@ -8,7 +8,6 @@ html {
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
-    overflow: hidden;
 }
 
 body {
@@ -51,7 +50,6 @@ body {
 h1 {
     color: white;
     font-weight: bold;
-    letter-spacing: 0.1em;
     font-size: 4em;
     font-family: 'Open Sans';
     margin: -10px 0;
@@ -60,6 +58,10 @@ h3 {
     color: white;
     padding-bottom: 20px;
     font-weight: thin;
+    font-style: italic;
+}
+h4 {
+    color: white;
 }
 
 footer {
@@ -77,9 +79,10 @@ footer > * > a {
 }
 
 .content {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin: 5vh 6vh 0 6vh;
+    background-color: rgba(0, 0, 0, 0.45);
     text-align: center;
 }
 ul {
@@ -115,48 +118,57 @@ a {
 }
 
 @media (max-width: 450px) {
-ul {
-    text-align: center;
-}
-li {
-    border-radius: 0%;
-    border: none;
-    color: white;
-    margin: 8px;
-    display: block;
-    list-style: none;
-    margin: 10px 0px;
-    text-align: center;
-    height: auto;
-    width: auto;
-}
-li:hover {
-    background-color: none;
-    transition: none;
-}
-a {
-    text-align: justify;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
-    padding: 15px;
-    padding-left: 30px;
-    width: 70%;
-}
-a:hover {
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    transition: 500ms;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-decoration: none;
-}
-.description {
-    display: inline-block;
-    color: white;
-    font-family: Arial;
-    margin-left: 40px;
-}
-.content {
-    padding-top: 60px;
+    ul {
+        text-align: center;
+    }
+    li {
+        border-radius: 0%;
+        border: none;
+        color: white;
+        margin: 8px;
+        display: block;
+        list-style: none;
+        margin: 10px 0px;
+        text-align: center;
+        height: auto;
+        width: auto;
+    }
+    li:hover {
+        background-color: none;
+        transition: none;
+    }
+    a.button {
+        text-align: justify;
+        border: 2px solid white;
+        border-radius: 5px;
+        color: white;
+        padding: 15px;
+        padding-left: 30px;
+        width: 70%;
+    }
+    a:hover {
+        -webkit-transition: 500ms;
+        -moz-transition: 500ms;
+        transition: 500ms;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-decoration: none;
+    }
+    .description {
+        display: inline-block;
+        color: white;
+        font-family: Arial;
+        font-size: 0.8em;
+        margin-left: 20px;
+    }
+    .content {
+        padding-top: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #avatar {
+        width: 40vw;
+        height: 40vw;
+    }
 }
