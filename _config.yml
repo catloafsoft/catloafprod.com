@@ -1,8 +1,9 @@
 # Site settings
 name: "Catloaf Productions"
 description: "Online Brand Management and Video Production"
-url: ""
+url: "https://www.catloafprod.com"
 
+ganid: UA-21516516-27
 
 # Delete the lines you don't need
 # about 5 elements are recomended
@@ -35,17 +36,12 @@ avatar_img_path: "imgs/avatar.jpg"
 # automatically whenever you change your GitHub profile picture
 #avatar_img_path: "https://avatars2.githubusercontent.com/u/17301305"
 
-
-front_img: yes
-front_img_path: "imgs/background.jpg"
-#front_img_path: "https://external.url/image.jpg"
-
-
-favicon_img: yes
-favicon_img_path: "imgs/favicon.ico"
-#favicon_img_path: "https://external.url/favicon.ico"
-
+front_img_path: "/imgs/background.jpg"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

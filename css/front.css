@@ -1,6 +1,16 @@
+html { 
+    background: url(/imgs/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: 'Open Sans',Helvetica,Arial,sans-serif;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.1);
     position: absolute; 
     top: 0;
     bottom: 0;
@@ -8,21 +18,31 @@ body {
     left: 0;
     margin: 0;
 }
-#fullscreen {
-    z-index: -999;
-    min-height: 100%;
-    min-width: 1024px;
+
+.scaling-svg {
+    position: absolute;
+    height: 100%;
     width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
     left: 0;
-    object-fit: contain;
+    top: 0;
 }
+
+.appLogo {
+    display: flex;
+	position: relative;
+	width: 85%;
+    height: 100%;
+    margin: auto auto;
+	padding: 0;
+}
+
 #avatar {
-    height: 180px;
+    height: 33vw;
+    width: 33vw;
     border-radius: 100%;
-    border: 5px solid white;
+    border: 2px solid grey;
+    background-color: white;
+    margin: auto;
     margin-bottom: 40px;
 }
 h1 {
@@ -38,6 +58,21 @@ h3 {
     padding-bottom: 20px;
     font-weight: thin;
 }
+
+footer {
+    padding-top: 100px;
+    color: white;
+    padding-bottom: 10px;
+    font-weight: thin;
+    font-size: 0.8em;
+    font-style: italic;
+}
+footer > * > a {
+    padding: 0;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
 .content {
     padding-top: 100px;
     padding-bottom: 40px;
