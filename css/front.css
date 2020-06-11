@@ -38,6 +38,15 @@ body {
 	padding: 0;
 }
 
+.artist {
+    display: flex;
+    position: relative;
+    margin: auto auto;
+    border-radius: 3%;
+    width: 90%;
+    border: 2px solid purple;
+}
+
 #avatar {
     height: 33vw;
     width: 33vw;
@@ -47,12 +56,26 @@ body {
     margin: auto;
     margin-bottom: 40px;
 }
+
+#ryo {
+    border: 1px solid grey;
+    border-radius: 3%;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 40vw;
+    margin: auto auto;
+}
+
 h1 {
     color: white;
     font-weight: bold;
     font-size: 4em;
     font-family: 'Open Sans';
     margin: -10px 0;
+}
+h2 {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Open Sans';
 }
 h3 {
     color: white;
@@ -62,8 +85,19 @@ h3 {
 }
 h4 {
     color: white;
+    font-weight: 300;
 }
-
+h5.name {
+    color: white;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+hr {
+    width: 70%;
+}
 footer {
     padding-top: 100px;
     color: white;
@@ -72,7 +106,7 @@ footer {
     font-size: 0.8em;
     font-style: italic;
 }
-footer > * > a {
+footer > * > a, .duties > * > a {
     padding: 0;
     text-decoration: underline;
     text-decoration-style: dashed;
@@ -81,15 +115,27 @@ footer > * > a {
 .content {
     padding-top: 50px;
     padding-bottom: 40px;
+    border-radius: 3vw;
     margin: 5vh 6vh 0 6vh;
     background-color: rgba(0, 0, 0, 0.45);
     text-align: center;
+    align-items: center;
 }
-ul {
+ul.duties {
+    width: 90%;
+    list-style: disc;
+    text-align: left;
+    font-weight: 100;
+}
+.duties > li {
+    color: white;
+}
+
+ul.social {
     list-style: none;
     padding: 0;
 }
-li {
+.social > li {
     border-radius: 100%;
     border: 2px solid white;
     color: white;
@@ -99,7 +145,7 @@ li {
     width: 65px;
     height: 65px;
 }
-li:hover {
+.social > li:hover {
     color: white;
     text-decoration: none;
     -webkit-transition: 500ms;
@@ -121,7 +167,7 @@ a {
     ul {
         text-align: center;
     }
-    li {
+    .social > li {
         border-radius: 0%;
         border: none;
         color: white;
@@ -133,7 +179,7 @@ a {
         height: auto;
         width: auto;
     }
-    li:hover {
+    .social > li:hover {
         background-color: none;
         transition: none;
     }
@@ -146,7 +192,7 @@ a {
         padding-left: 30px;
         width: 70%;
     }
-    a:hover {
+    .social > a:hover {
         -webkit-transition: 500ms;
         -moz-transition: 500ms;
         transition: 500ms;
@@ -166,6 +212,12 @@ a {
     }
     h1 {
         font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    #ryo {
+        width: 70vw;
     }
     #avatar {
         width: 40vw;
