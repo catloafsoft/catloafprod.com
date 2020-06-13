@@ -21,6 +21,11 @@ body {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .scaling-svg {
     position: absolute;
     height: 100%;
@@ -125,10 +130,11 @@ ul.duties {
     width: 90%;
     list-style: disc;
     text-align: left;
-    font-weight: 100;
+    font-weight: 300;
 }
 .duties > li {
     color: white;
+    margin-bottom: 1em;
 }
 
 ul.social {
@@ -222,5 +228,11 @@ a {
     #avatar {
         width: 40vw;
         height: 40vw;
+    }
+}
+
+@media (max-width: 350px) {
+    h1 {
+        font-size: 1.5em;
     }
 }
