@@ -49,7 +49,14 @@ img {
     margin: auto auto;
     border-radius: 3%;
     width: 90%;
+}
+
+.artist.ryo {
     border: 2px solid purple;
+}
+
+.artist.psw {
+    border: 2px solid blue;
 }
 
 #avatar {
@@ -62,12 +69,19 @@ img {
     margin-bottom: 40px;
 }
 
-#ryo {
+#artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artist-box {
     border: 1px solid grey;
     border-radius: 3%;
     background-color: rgba(0, 0, 0, 0.45);
     width: 40vw;
-    margin: auto auto;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 h1 {
