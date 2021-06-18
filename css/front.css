@@ -210,6 +210,7 @@ a {
         color: white;
         padding: 15px;
         padding-left: 30px;
+        margin-bottom: 0.8em;
         width: 70%;
     }
     .social > a:hover {
@@ -236,7 +237,7 @@ a {
     h2 {
         font-size: 1.5em;
     }
-    #ryo {
+    .artist-box {
         width: 70vw;
     }
     #avatar {
