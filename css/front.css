@@ -55,8 +55,16 @@ img {
     border: 2px solid purple;
 }
 
+.artist.progject {
+    border: 2px solid red;
+}
+
 .artist.psw {
     border: 2px solid blue;
+}
+
+.artist.profundo {
+    border: 2px solid rgb(202, 175, 19);
 }
 
 #avatar {
@@ -114,6 +122,15 @@ h5.name {
     font-size: 2em;
     font-weight: bold;
 }
+
+p.subtitle {
+    color: white;
+    font-size: 1em;
+    font-style: italic;
+    font-family: 'Open Sans';
+    margin-top: 0;
+}
+
 hr {
     width: 70%;
 }
