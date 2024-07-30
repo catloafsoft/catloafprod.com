@@ -1,6 +1,6 @@
 # Site settings
 name: "Catloaf Productions"
-description: "Online Brand Management &amp; Video Production"
+description: "Website Design, Online Brand Management &amp; Video Production"
 url: "https://catloafprod.com"
 
 google_tag: GTM-KRCTVFX
@@ -11,6 +11,7 @@ author:
   twitter: catloafsoft
 
 logo: "/imgs/catloafprod.jpg"
+image: /imgs/banner.jpg
 
 # Delete the lines you don't need
 # about 5 elements are recomended
