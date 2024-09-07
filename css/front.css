@@ -2,7 +2,7 @@
 layout: null
 ---
 html { 
-    background: url({{ site.baseurl }}/imgs/background.jpg) no-repeat center center fixed; 
+    background: url({{ site.baseurl }}{{ site.imgprefix }}/imgs/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
