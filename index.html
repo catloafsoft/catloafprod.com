@@ -1,6 +1,8 @@
 ---
 permalink: /
-image: /imgs/catloafprod.jpg
+title: "Website Design, Brand Management & Video Production for Artists"
+description: "Catloaf Productions provides website design, online brand management, social media support, and video production for musicians and arts organizations."
+image: /imgs/banner.jpg
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -8,30 +10,45 @@ image: /imgs/catloafprod.jpg
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
         <link rel="stylesheet" href="{{ "/css/front.css" | prepend: site.baseurl }}">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	    <link rel="preconnect" href="https://www.googletagmanager.com">
-        <meta property="og:type" content="website" />
-
-        <meta property="og:image" content="{{ site.url }}{{ site.imgprefix }}{{ site.image }}" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "{{ site.name }}",
+            "@type": "ProfessionalService",
+            "@id": "{{ site.url }}/#organization",
+            "name": {{ site.name | jsonify }},
             "url": "{{ site.url }}",
             "logo": "{{ site.url }}{{ site.imgprefix }}/imgs/catloafprod.jpg",
-            "description": "{{ site.description }}",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "email": "{{ site.email }}",
-                "contactType": "Information"
-            }
+            "image": "{{ site.url }}{{ site.imgprefix }}{{ site.image }}",
+            "description": {{ site.description | strip_html | jsonify }},
+            "email": {{ site.email | jsonify }},
+            "areaServed": [
+                "Los Angeles, California",
+                "United States"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Los Angeles",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://facebook.com/{{ site.facebook_username }}",
+                "https://x.com/{{ site.twitter_username }}"
+            ],
+            "knowsAbout": [
+                "Website design",
+                "Online brand management",
+                "Social media management",
+                "Video production",
+                "Music industry marketing"
+            ]
         }
         </script>
 
@@ -43,7 +60,7 @@ image: /imgs/catloafprod.jpg
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag }}"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->I
+	<!-- End Google Tag Manager (noscript) -->
         <div class="content">
 
             <div id="avatar">
@@ -145,25 +162,25 @@ image: /imgs/catloafprod.jpg
                 <h2>Our Artist Portfolio</h2>
                 <div id="artists">
                     <div id="spocks-beard" class="artist-box">
-                        <a href="https://www.spocksbeard.com/"><img class="artist spocks-beard" src="{{ site.imgprefix }}/imgs/sb.jpg" title="Spock's Beard" alt="Spock's Beard" /></a>
+                        <a href="https://www.spocksbeard.com/"><img class="artist spocks-beard" src="{{ site.imgprefix }}/imgs/sb.jpg" title="Spock's Beard" alt="Spock's Beard progressive rock band website design portfolio" width="1000" height="1000" decoding="async" /></a>
                         <h5 class="name"><a href="https://www.spocksbeard.com/">Spock's Beard</a></h5>
                         <p class="subtitle">Legendary Progressive Rock Band</p>
                         <ul class="duties">
                             <li><a href="https://www.spocksbeard.com/">Website Design</a></li>
-                            <li>Online Infrastucture Management</li>
+                            <li>Online Infrastructure Management</li>
                         </ul>
                     </div>
                     <div id="pete-griffin" class="artist-box">
-                        <a href="https://petegriffinbass.com/"><img class="artist pete-griffin" src="{{ site.imgprefix }}/imgs/pete-griffin.jpg" title="Pete Griffin" alt="Pete Griffin" /></a>
+                        <a href="https://petegriffinbass.com/"><img class="artist pete-griffin" src="{{ site.imgprefix }}/imgs/pete-griffin.jpg" title="Pete Griffin" alt="Pete Griffin bassist website design portfolio" width="600" height="600" loading="lazy" decoding="async" /></a>
                         <h5 class="name"><a href="https://petegriffinbass.com/">Pete Griffin</a></h5>
                         <p class="subtitle">Grammy Award-Winning Bassist</p>
                         <ul class="duties">
                             <li><a href="https://petegriffinbass.com/">Website Design</a></li>
-                            <li>Online Infrastucture Management</li>
+                            <li>Online Infrastructure Management</li>
                         </ul>
                     </div>
                     <div id="progject" class="artist-box">
-                        <a href="https://www.progject.com/"><img class="artist progject" src="{{ site.imgprefix }}/imgs/progject.jpg" title="ProgJect" alt="ProgJect" /></a>
+                        <a href="https://www.progject.com/"><img class="artist progject" src="{{ site.imgprefix }}/imgs/progject.jpg" title="ProgJect" alt="ProgJect progressive rock website and social media portfolio" width="2048" height="2048" loading="lazy" decoding="async" /></a>
                         <h5 class="name"><a href="https://www.progject.com/">ProgJect</a></h5>
                         <p class="subtitle">The Ultimate Prog Rock Experience</p>
                         <ul class="duties">
@@ -172,7 +189,7 @@ image: /imgs/catloafprod.jpg
                         </ul>
                     </div>
                     <div id="ryo" class="artist-box">
-                        <a href="https://www.ryookumoto.com/"><img class="artist ryo" src="{{ site.imgprefix }}/imgs/ryo.jpg" title="Ryo Okumoto" alt="Ryo Okumoto" /></a>
+                        <a href="https://www.ryookumoto.com/"><img class="artist ryo" src="{{ site.imgprefix }}/imgs/ryo.jpg" title="Ryo Okumoto" alt="Ryo Okumoto multilingual website and marketing portfolio" width="1000" height="1000" loading="lazy" decoding="async" /></a>
                         <h5 class="name"><a href="https://www.ryookumoto.com/">Ryo Okumoto</a></h5>
                         <p class="subtitle">Progressive Rock and Fusion Keyboard Wizard</p>
                         <ul class="duties">
@@ -184,7 +201,7 @@ image: /imgs/catloafprod.jpg
                         </ul>
                     </div>
                     <div id="psw" class="artist-box">
-                        <a href="https://pswinds.org/"><img class="artist psw" src="{{ site.imgprefix }}/imgs/psw.jpg" title="Peninsula Symphonic Winds" alt="Peninsula Symphonic Winds" /></a>
+                        <a href="https://pswinds.org/"><img class="artist psw" src="{{ site.imgprefix }}/imgs/psw.jpg" title="Peninsula Symphonic Winds" alt="Peninsula Symphonic Winds website and video production portfolio" width="1000" height="1000" loading="lazy" decoding="async" /></a>
                         <h5 class="name"><a href="https://pswinds.org/">Peninsula Symphonic Winds</a></h5>
                         <p class="subtitle">Community Concert Band in Torrance, CA</p>
                         <ul class="duties">
@@ -194,7 +211,7 @@ image: /imgs/catloafprod.jpg
                         </ul>
                     </div>
                     <div id="profundo" class="artist-box">
-                        <a href="https://profundobono.com/"><img class="artist profundo" src="{{ site.imgprefix }}/imgs/profundobono.jpg" title="Profundo Bono" alt="Profundo Bono" /></a>
+                        <a href="https://profundobono.com/"><img class="artist profundo" src="{{ site.imgprefix }}/imgs/profundobono.jpg" title="Profundo Bono" alt="Profundo Bono theater company website design portfolio" width="1000" height="1000" loading="lazy" decoding="async" /></a>
                         <h5 class="name"><a href="https://profundobono.com">Profundo Bono</a></h5>
                         <p class="subtitle">A Theater Company of Delaware Legal Professionals</p>
                         <ul class="duties">

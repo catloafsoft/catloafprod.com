@@ -1,6 +1,7 @@
 # Site settings
+title: "Catloaf Productions"
 name: "Catloaf Productions"
-description: "Website Design, Online Brand Management &amp; Video Production"
+description: "Website design, online brand management, and video production for musicians, performing artists, and arts organizations."
 url: "https://catloafprod.com"
 
 google_tag: GTM-KRCTVFX
@@ -12,6 +13,11 @@ author:
 
 logo: "/imgs/catloafprod.jpg"
 image: /imgs/banner.jpg
+social:
+  name: "Catloaf Productions"
+  links:
+    - "https://facebook.com/CatloafProd"
+    - "https://x.com/catloafsoft"
 
 # Delete the lines you don't need
 # about 5 elements are recomended
@@ -49,9 +55,11 @@ markdown: kramdown
 permalink: pretty
 
 exclude:
+  - AGENTS.md
   - LICENSE
   - README.md
   - CNAME
+  - vendor/
 
 plugins:
   - jekyll-seo-tag
