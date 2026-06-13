@@ -1,24 +1,40 @@
 ---
 layout: null
 ---
+:root {
+    --ink: #06131a;
+    --panel: rgba(5, 16, 22, 0.68);
+    --panel-strong: rgba(5, 16, 22, 0.82);
+    --line: rgba(255, 255, 255, 0.24);
+    --line-bright: rgba(255, 255, 255, 0.42);
+    --accent: #3fd0ff;
+    --accent-strong: #15aee4;
+    --accent-warm: #f2cf63;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html { 
     background: url({{ site.baseurl }}{{ site.imgprefix }}/imgs/background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
     font-family: 'Open Sans',Helvetica,Arial,sans-serif;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute; 
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    background:
+        radial-gradient(circle at 18% 14%, rgba(63, 208, 255, 0.28), transparent 28%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.72));
+    min-height: 100%;
     margin: 0;
+    color: white;
 }
 
 img {
@@ -48,9 +64,10 @@ img {
     display: block;
     position: relative;
     margin: auto auto;
-    border-radius: 3%;
+    border-radius: 14px;
     width: 90%;
     height: auto;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
 }
 
 .artist.ryo {
@@ -70,59 +87,88 @@ img {
 }
 
 #avatar {
-    height: 33vw;
-    width: 33vw;
+    height: clamp(150px, 24vw, 290px);
+    width: clamp(150px, 24vw, 290px);
     border-radius: 100%;
-    border: 2px solid grey;
+    border: 1px solid rgba(255, 255, 255, 0.72);
     background-color: white;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
+    box-shadow:
+        0 0 0 10px rgba(255, 255, 255, 0.08),
+        0 24px 80px rgba(63, 208, 255, 0.26);
 }
 
 #artists {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 28px;
+    padding: 0 34px;
 }
 
 .artist-box {
-    border: 1px solid grey;
-    border-radius: 3%;
-    background-color: rgba(0, 0, 0, 0.45);
-    width: 40vw;
-    margin: 0 auto;
-    margin-top: 10px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10), transparent 34%),
+        var(--panel);
+    margin: 0;
+    padding: 18px 0 8px;
+    overflow: hidden;
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.30);
+    transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+
+.artist-box:hover {
+    border-color: var(--line-bright);
+    background-color: rgba(7, 23, 31, 0.88);
+    box-shadow: 0 28px 88px rgba(0, 0, 0, 0.42);
+    transform: translateY(-6px);
 }
 
 h1 {
     color: white;
     font-weight: bold;
-    font-size: 4em;
+    font-size: clamp(2.6em, 6.2vw, 5.8em);
     font-family: 'Open Sans';
-    margin: -10px 0;
+    line-height: 0.95;
+    margin: -6px auto 14px;
+    max-width: 980px;
+    text-shadow: 0 12px 45px rgba(0, 0, 0, 0.55);
 }
 h2 {
     color: white;
-    font-size: 2.5em;
+    font-size: clamp(2em, 4vw, 3.25em);
     font-family: 'Open Sans';
+    line-height: 1.05;
+    margin-bottom: 18px;
 }
 h3 {
     color: white;
-    padding-bottom: 20px;
-    font-weight: thin;
+    width: min(740px, calc(100% - 68px));
+    padding: 0 0 16px;
+    font-weight: 300;
     font-style: italic;
+    font-size: clamp(1.12em, 2vw, 1.55em);
+    line-height: 1.45;
+    max-width: 740px;
+    margin: 0 auto;
 }
 h4 {
-    color: white;
+    color: rgba(255, 255, 255, 0.72);
     font-weight: 300;
+    margin-top: 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 h5.name {
     color: white;
-    padding-top: 0;
+    padding-top: 18px;
     margin-top: 0;
-    margin-bottom: 0;
-    font-size: 2em;
+    margin-bottom: 3px;
+    font-size: clamp(1.55em, 2.6vw, 2.25em);
     font-weight: bold;
+    line-height: 1.05;
 }
 
 p.subtitle {
@@ -135,12 +181,21 @@ p.subtitle {
 
 hr {
     width: 70%;
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 42px auto 46px;
 }
 
 #services-cta {
-    max-width: 760px;
+    width: min(760px, calc(100% - 68px));
     margin: 45px auto 35px;
-    padding: 0 24px;
+    padding: 30px 32px 34px;
+    border: 1px solid rgba(63, 208, 255, 0.28);
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(63, 208, 255, 0.16), rgba(242, 207, 99, 0.10)),
+        rgba(5, 16, 22, 0.52);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 24px 76px rgba(0, 0, 0, 0.28);
 }
 
 #services-cta p {
@@ -152,22 +207,32 @@ hr {
 
 .cta-button {
     display: inline-block;
-    border: 2px solid white;
-    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+    color: var(--ink);
     font-weight: 700;
     letter-spacing: 0;
-    padding: 14px 24px;
+    padding: 15px 28px;
+    box-shadow: 0 14px 34px rgba(63, 208, 255, 0.28);
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
 .cta-button:hover {
-    background-color: rgba(255, 255, 255, 0.16);
+    filter: saturate(1.08) brightness(1.04);
+    box-shadow: 0 18px 44px rgba(63, 208, 255, 0.36);
+    transform: translateY(-2px);
     text-decoration: none;
 }
 
+.cta-button:active {
+    transform: translateY(1px);
+}
+
 footer {
-    padding-top: 100px;
+    padding-top: 34px;
     color: white;
-    padding-bottom: 10px;
+    padding-bottom: 0;
     font-weight: thin;
     font-size: 0.8em;
     font-style: italic;
@@ -179,11 +244,17 @@ footer > * > a, .duties > * > a {
 }
 
 .content {
-    padding-top: 50px;
-    padding-bottom: 40px;
-    border-radius: 3vw;
-    margin: 5vh 6vh 0 6vh;
-    background-color: rgba(0, 0, 0, 0.45);
+    padding-top: clamp(34px, 5vw, 68px);
+    padding-bottom: 46px;
+    border: 1px solid var(--line);
+    border-radius: clamp(20px, 3vw, 34px);
+    margin: clamp(18px, 5vh, 52px) clamp(16px, 5vw, 72px) 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10), transparent 24%),
+        var(--panel);
+    box-shadow: 0 36px 110px rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(12px) saturate(128%);
+    -webkit-backdrop-filter: blur(12px) saturate(128%);
     text-align: center;
     align-items: center;
 }
@@ -201,16 +272,19 @@ ul.duties {
 ul.social {
     list-style: none;
     padding: 0;
+    margin: 26px 0 0;
 }
 .social > li {
     border-radius: 100%;
-    border: 2px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.50);
     color: white;
     margin: 8px;
     display: inline-block;
     list-style: none;
     width: 65px;
     height: 65px;
+    background-color: rgba(255, 255, 255, 0.08);
+    transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 .social > li:hover {
     color: white;
@@ -219,15 +293,41 @@ ul.social {
     -moz-transition: 500ms;
     transition: 500ms;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(63, 208, 255, 0.80);
+    background-color: rgba(63, 208, 255, 0.16);
+    transform: translateY(-3px);
 }
 a {
     color: white;
-    padding: 15px;
     text-decoration: none;
 }
+
+a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
 .description {
     display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .artist-box,
+    .social > li,
+    .cta-button {
+        transition: none;
+    }
+
+    .artist-box:hover,
+    .social > li:hover,
+    .cta-button:hover,
+    .cta-button:active {
+        transform: none;
+    }
 }
 
 @media (max-width: 450px) {
@@ -235,30 +335,14 @@ a {
         text-align: center;
     }
     .social > li {
-        border-radius: 0%;
-        border: none;
-        color: white;
+        display: inline-block;
         margin: 8px;
-        display: block;
-        list-style: none;
-        margin: 10px 0px;
-        text-align: center;
-        height: auto;
-        width: auto;
     }
     .social > li:hover {
-        background-color: none;
         transition: none;
     }
     a.button {
-        text-align: justify;
-        border: 2px solid white;
-        border-radius: 5px;
-        color: white;
-        padding: 15px;
-        padding-left: 30px;
-        margin-bottom: 0.8em;
-        width: 70%;
+        padding: 0;
     }
     .social > a:hover {
         -webkit-transition: 500ms;
@@ -269,27 +353,40 @@ a {
         text-decoration: none;
     }
     .description {
-        display: inline-block;
-        color: white;
-        font-family: Arial;
-        font-size: 0.8em;
-        margin-left: 20px;
+        display: none;
     }
     .content {
         padding-top: 20px;
+        margin: 14px;
+        border-radius: 20px;
     }
     h1 {
         font-size: 2em;
+    }
+    h3 {
+        width: auto;
+        padding-right: 18px;
+        padding-left: 18px;
     }
     h2 {
         font-size: 1.5em;
     }
     .artist-box {
-        width: 70vw;
+        width: auto;
     }
     #avatar {
         width: 40vw;
         height: 40vw;
+    }
+    #artists {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0 14px;
+    }
+    #services-cta {
+        width: auto;
+        margin: 32px 14px 28px;
+        padding: 24px 18px 28px;
     }
 }
 
