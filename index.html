@@ -12,7 +12,7 @@ image: /imgs/banner.jpg
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ "/css/front.css" | prepend: site.baseurl }}">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	    <link rel="preconnect" href="https://www.googletagmanager.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,89 +74,94 @@ image: /imgs/banner.jpg
             <h4>Los Angeles, California</h4>
             <ul class="social">
                 {% if site.github_username %}
-                <li><a class="fa fa-2x fa-github button" href="https://github.com/{{ site.github_username }}"><span class="description">GitHub</span></a></li>
+                <li><a class="fa-brands fa-2x fa-github button" href="https://github.com/{{ site.github_username }}"><span class="description">GitHub</span></a></li>
                 {% endif %}
 
                 {% if site.codepen_username %}
-                <li><a class="fa fa-2x fa-codepen button" href="https://codepen.io/{{ site.codepen_username }}"><span class="description">CodePen</span></a></li>
+                <li><a class="fa-brands fa-2x fa-codepen button" href="https://codepen.io/{{ site.codepen_username }}"><span class="description">CodePen</span></a></li>
                 {% endif %}
 
                 {% if site.facebook_username %}
-                <li><a class="fa fa-2x fa-facebook button" href="https://facebook.com/{{ site.facebook_username }}"><span class="description">Facebook</span></a></li>
+                <li><a class="fa-brands fa-2x fa-facebook-f button" href="https://facebook.com/{{ site.facebook_username }}"><span class="description">Facebook</span></a></li>
                 {% endif %}
 
                 {% if site.vk_username %}
-                <li><a class="fa fa-2x fa-vk button" href="https://vk.com/{{ site.vk_username }}"><span class="description">ВКонтакте</span></a></li>
+                <li><a class="fa-brands fa-2x fa-vk button" href="https://vk.com/{{ site.vk_username }}"><span class="description">ВКонтакте</span></a></li>
                 {% endif %}
 
                 {% if site.twitter_username %}
-                <li><a class="fa fa-2x fa-twitter button" href="https://x.com/{{ site.twitter_username }}"><span class="description">Twitter</span></a></li>
+                <li><a class="fa-brands fa-2x fa-x-twitter button" href="https://x.com/{{ site.twitter_username }}"><span class="description">X</span></a></li>
                 {% endif %}
 
                 {% if site.google_plus_username %}
-                <li><a class="fa fa-2x fa-google-plus button" href="https://plus.google.com/+{{ site.google_plus_username }}"><span class="description">Google +</span></a></li>
+                <li><a class="fa-brands fa-2x fa-google-plus-g button" href="https://plus.google.com/+{{ site.google_plus_username }}"><span class="description">Google +</span></a></li>
                 {% endif %}
 
                 {% if site.linkedin_username %}
-                <li><a class="fa fa-2x fa-linkedin button" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="description">LinkedIn</span></a></li>
+                <li><a class="fa-brands fa-2x fa-linkedin-in button" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="description">LinkedIn</span></a></li>
                 {% endif %}
 
                 {% if site.vine_username %}
-                <li><a class="fa fa-2x fa-vine button" href="https://vine.co/{{ site.vine_username }}"><span class="description">Vine</span></a></li>
+                <li><a class="fa-brands fa-2x fa-vine button" href="https://vine.co/{{ site.vine_username }}"><span class="description">Vine</span></a></li>
                 {% endif %}
 
                 {% if site.instagram_username %}
-                <li><a class="fa fa-2x fa-instagram button" href="https://instagram.com/{{ site.instagram_username }}"><span class="description">Instagram</span></a></li>
+                <li><a class="fa-brands fa-2x fa-instagram button" href="https://instagram.com/{{ site.instagram_username }}"><span class="description">Instagram</span></a></li>
                 {% endif %}
 
                 {% if site.flickr_usernmae %}
-                <li><a class="fa fa-2x fa-flickr button" href="https://flickr.com/photos/{{ site.flickr_username }}"><span class="description">Flickr</span></a></li>
+                <li><a class="fa-brands fa-2x fa-flickr button" href="https://flickr.com/photos/{{ site.flickr_username }}"><span class="description">Flickr</span></a></li>
                 {% endif %}
 
                 {% if site.steam_username %}
-                <li><a class="fa fa-2x fa-steam button" href="http://steamcommunity.com/id/{{ site.steam_username }}"><span class="description">Steam</span></a></li>
+                <li><a class="fa-brands fa-2x fa-steam button" href="http://steamcommunity.com/id/{{ site.steam_username }}"><span class="description">Steam</span></a></li>
                 {% endif %}
 
                 {% if site.soundcloud_username %}
-                <li><a class="fa fa-2x fa-soundcloud button" href="https://soundcloud.com/{{ site.soundcloud_username }}"><span class="description">Soundcloud</span></a></li>
+                <li><a class="fa-brands fa-2x fa-soundcloud button" href="https://soundcloud.com/{{ site.soundcloud_username }}"><span class="description">Soundcloud</span></a></li>
                 {% endif %}
 
                 {% if site.lastfm_username %}
-                <li><a class="fa fa-2x fa-lastfm button" href="http://www.last.fm/user/{{ site.lastfm_username }}"><span class="description">Last.fm</span></a></li>
+                <li><a class="fa-brands fa-2x fa-lastfm button" href="http://www.last.fm/user/{{ site.lastfm_username }}"><span class="description">Last.fm</span></a></li>
                 {% endif %}
 
                 {% if site.stack_of_username %}
-                <li><a class="fa fa-2x fa-stack-overflow button" href="https://stackoverflow.com/users/{{ site.stack_of_username }}"><span class="description">Stack OF</span></a></li>
+                <li><a class="fa-brands fa-2x fa-stack-overflow button" href="https://stackoverflow.com/users/{{ site.stack_of_username }}"><span class="description">Stack OF</span></a></li>
                 {% endif %}
 
                 {% if site.reddit_username %}
-                <li><a class="fa fa-2x fa-reddit button" href="https://reddit.com/user/{{ site.reddit_username }}"><span class="description">Reddit</span></a></li>
+                <li><a class="fa-brands fa-2x fa-reddit-alien button" href="https://reddit.com/user/{{ site.reddit_username }}"><span class="description">Reddit</span></a></li>
                 {% endif %}
 
                 {% if site.medium_username %}
-                <li><a class="fa fa-2x fa-medium button" href="https://medium.com/@{{ site.medium_username }}"><span class="description">Medium</span></a></li>
+                <li><a class="fa-brands fa-2x fa-medium button" href="https://medium.com/@{{ site.medium_username }}"><span class="description">Medium</span></a></li>
                 {% endif %}
 
                 {% if site.tumblr_username %}
-                <li><a class="fa fa-2x fa-tumblr button" href="https://{{ site.tumblr_username }}.tumblr.com/"><span class="description">Tumblr</span></a></li>
+                <li><a class="fa-brands fa-2x fa-tumblr button" href="https://{{ site.tumblr_username }}.tumblr.com/"><span class="description">Tumblr</span></a></li>
                 {% endif %}
 
                 {% if site.weibo_username %}
-                <li><a class="fa fa-2x fa-weibo button" href="https://weibo.com/{{ site.weibo_username }}"><span class="description">微博</span></a></li>
+                <li><a class="fa-brands fa-2x fa-weibo button" href="https://weibo.com/{{ site.weibo_username }}"><span class="description">微博</span></a></li>
                 {% endif %}
 
                 {% if site.blog_url %}
-                <li><a class="fa fa-2x fa-tags button" href="{{ site.baseurl }}{{ site.blog_url }}"><span class="description">Blog</span></a></li>
+                <li><a class="fa-solid fa-2x fa-tags button" href="{{ site.baseurl }}{{ site.blog_url }}"><span class="description">Blog</span></a></li>
                 {% endif %}
 
                 {% if site.email %}
-                <li><a class="fa fa-2x fa-envelope button" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
+                <li><a class="fa-solid fa-2x fa-envelope button" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
                 {% endif %}
 
                 {% if site.public_key_url %}
-                <li><a class="fa fa-2x fa-key button" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
+                <li><a class="fa-solid fa-2x fa-key button" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
                 {% endif %}
             </ul>
+            <section id="services-cta">
+                <h2>Ready for a Sharper Online Presence?</h2>
+                <p>From focused updates to full launches, we scale the work to fit the project, timeline, and budget while keeping the result polished and easy to book.</p>
+                <a class="cta-button" href="mailto:{{ site.email }}?subject=New%20project%20inquiry">Discuss Your Project</a>
+            </section>
             <hr/>
             <section id="portfolio">
                 <h2>Our Artist Portfolio</h2>

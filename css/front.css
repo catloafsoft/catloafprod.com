@@ -136,6 +136,34 @@ p.subtitle {
 hr {
     width: 70%;
 }
+
+#services-cta {
+    max-width: 760px;
+    margin: 45px auto 35px;
+    padding: 0 24px;
+}
+
+#services-cta p {
+    color: white;
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin: 0 auto 28px;
+}
+
+.cta-button {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 14px 24px;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    text-decoration: none;
+}
+
 footer {
     padding-top: 100px;
     color: white;
